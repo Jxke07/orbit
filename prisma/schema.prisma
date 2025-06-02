@@ -176,7 +176,7 @@ model ActivitySession {
 }
 
 model apiKey {
-  id               String    @id @unique
+  id               String    @id @unique @default(uuid())    // <-- ADDED THIS
   name             String
   key              String    @unique
   lastUsed         DateTime?
